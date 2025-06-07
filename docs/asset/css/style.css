@@ -10,3 +10,7 @@
 p {
     text-indent: 1em;
 }
+
+table, tr, th {
+    border: 1px solid black;
+}

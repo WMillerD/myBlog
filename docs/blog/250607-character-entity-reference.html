@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <head>
+        <title>HTMLで「&amp;○○」「&amp;#○○」と書く文字実体参照をわかりやすく解説</title>
+    </head>
+    <body>
+        <a href="./../index.html">記事リストに戻る</a><br>
+        <h1>HTMLで「&amp;○○」と書く文字実体参照をわかりやすく解説</h1>
+        <p>
+            HTMLを書く中で、「&amp;○○;」というような文字列を表示したいのに、うまく表示されなかった経験はありませんか？<br>
+            この記事では、HTMLにおける「&amp;○○;」の正しい書き方や、その仕組みについて初心者にもわかりやすく解説します。<br>
+        </p>
+        <h2>✅「&amp;○○;」「&amp;#○○;」とは？</h2>
+        <p>
+            HTMLでは、<b>特殊な意味を持つ記号</b>がいくつかあります。<br>
+            その中でも代表的なのが「&amp;」や「&lt;」などの記号です。<br>
+        </p>
+        たとえば以下のような文字は、HTMLでそのまま書くとブラウザに誤解されることがあります：<br>
+        <ul>
+            <li>& （アンパサンド）</li>
+            <li>< （小なり）</li>
+            <li>> （大なり）</li>
+            <li>" （ダブルクオート）</li>
+            <li>' （シングルクオート）</li>
+        </ul>
+        こうした記号を正しく表示するために使うのが、<b>文字実体参照（Character Entity Reference）</b>です。
+        <h2>🧾 書き方の基本：「&amp;名前;」または「&amp;#数値;」</h2>
+        特殊文字を表示するには、次のいずれかの形式を使います：
+        <ul>
+            <li><b>&amp;名前;</b> 名前付きエンティティ</li>
+            <li><b>&amp;#数値;</b> 数値参照（Unicode）</li>
+        </ul>
+        <table>
+            <caption>文字実体参照の例</caption>
+            <thead>
+                <tr> <th scope="col">表示される文字</th> <th scope="col">名前付き</th> <th scope="col">数値参照</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <th scope="row">&amp;</th> <th>&amp;amp;</th> <th>&amp;#38;</th> </tr>
+                <tr> <th scope="row">&lt;</th> <th>&amp;lt;</th> <th>&amp;#60;</th> </tr>
+                <tr> <th scope="row">&gt;</th> <th>&amp;gt;</th> <th>&amp;#62;</th> </tr>
+                <tr> <th scope="row">&quot;</th> <th>&amp;quot;</th> <th>&amp;#34;</th> </tr>
+                <tr> <th scope="row">&apos;</th> <th>&amp;apos;</th> <th>&amp;#39;</th> </tr>
+                <tr> <th scope="row">&#9675;</th> <th>（なし）</th> <th>&amp;#9675;</th> </tr>
+            </tbody>
+        </table>
+        </p>
+        <h2>💡 「&amp;○○」と文字列として表示したい場合</h2>
+        たとえば HTML 上で次のように表示したい場合：<br>
+        <br>
+        &amp;○○;<br>
+        <br>
+        HTMLでそのまま書くと 「&amp;○○;」 は「文字実体」として解釈されてしまいます。<br>
+        これを<b>そのまま表示する</b>には、アンパサンド（&amp;）をエスケープする必要があります：<br>
+        <br>
+        &amp;amp;<br>
+        <br>
+        これで、ブラウザ上では文字列「&amp;○○」として正しく表示されます。<br>
+
+        <h2>🔵 「&#9675;」の記号を表示するには？</h2>
+        <p>
+            「&#9675;」は Unicode に含まれる記号で、HTML では数値参照を使って次のように書けます：<br>
+            <br>
+            &amp;#9675;<br>
+            <br>
+            これにより、ブラウザでは「&#9675;」と表示されます。
+        </p>
+        <h2>✅ まとめ</h2>
+        <p>
+            HTMLでは &amp; や &lt; などの記号はエスケープが必要。<br>
+            表示するには 文字実体参照（名前 or 数値）を使う。<br>
+            「&amp;○○」という文字列を表示したい場合は「&amp;amp;○○」と書く。<br>
+            Unicodeの記号は「&#数値;」で表示できる。<br>
+        </p>
+        <hr>
+        <p>
+            ただのリンクとCSSでダークモードもどきを作っていましたが、<br>
+            あまりにもメンテナンス性が悪いので削除しました！<br>
+            今後、慣れてきてからダークモード機能に手を出したいと思います。<br>
+        </p>
+        みらー<br>
+        <time datetime="2025-06-07">June 7th, 2025</time><br>
+    <link rel="stylesheet" href="./../asset/css/style.css">
+</html>
